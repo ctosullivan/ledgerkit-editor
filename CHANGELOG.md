@@ -6,6 +6,13 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.0] — 2026-09-12
+
+### Changed
+- Relicensed ledgerkit-editor from MIT to **GPL-3.0-or-later**, matching upstream ledgerkit's relicense (2026-09-12) to the same SPDX identifier. Root `LICENSE` replaced with the standard GNU GPLv3 text; added `NOTICE` and `THIRD-PARTY-NOTICES.md` (Textual and ledgerkit, both currently MIT — compatible with GPL-3.0-or-later). `pyproject.toml`'s `license` field moved to the PEP 639 SPDX-expression form and the now-conflicting `License :: OSI Approved :: MIT License` classifier removed; `build-system.requires` bumped to `setuptools>=77` for full PEP 639 support. The `ledgerkit==1.0.0.dev1` dependency pin is unchanged and remains MIT for now — bumping it to ledgerkit's own future GPL release is a separate decision.
+  **Human:** "Plan an update to ledgerkit-editor's license to update to GPL 3.0 or better in line with the dependency ledgerkit"
+  **Claude:** Replaced `LICENSE`; added `NOTICE` and `THIRD-PARTY-NOTICES.md`; updated `pyproject.toml` license field/classifier/`setuptools` minimum.
+
 ## [1.1.1] — 2026-09-09
 
 ### Fixed
