@@ -6,6 +6,11 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- Tidied up README.md and ROADMAP.md, which had drifted out of sync with what's actually shipped: the transaction filter (`Ctrl+O`) and Tab autocomplete were still described as unreleased/in-progress on the `release/1.1.0` branch, even though both shipped in v1.1.0 (with fixes in v1.1.1) and had been merged to `master` since. Added the project demo GIF (`ledgerkit-editor-demo.gif`) above the README's Features section, and a License section pointing to `LICENSE`/`NOTICE`/`THIRD-PARTY-NOTICES.md`.
+  **Human:** "Update & tidy up the README to reflect current status, functionality & ROADMAP - also include the demo gif located in the project root - display above the features heading. Keep the warning about the early beta"
+  **Claude:** Rewrote README.md's Features/Planned sections from the actual shipped functionality (verified against CHANGELOG.md and `docs/shortcuts.md`) rather than the stale ROADMAP text; added the demo GIF and a License section; kept the early-beta warning unchanged. Trimmed the "Planned / In Progress" ROADMAP pointer to a plain one-line reference and removed the now-redundant side-panel-features paragraph (already covered by ROADMAP.md's "Window Panes" note). Updated ROADMAP.md's "What Is Shipped" header to v1.2.0, moved the filter/autocomplete out of "In Progress" into "What Is Shipped", and updated the Milestone A/B notes to record that they shipped.
+
 ## [1.2.0] — 2026-09-12
 
 ### Changed

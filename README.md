@@ -13,6 +13,8 @@ Built with [Textual](https://textual.textualize.io/) and
 
 ---
 
+![ledgerkit-editor demo](ledgerkit-editor-demo.gif)
+
 ## Features
 
 - Full-screen text editor with hledger syntax highlighting (dates, payees, accounts,
@@ -22,6 +24,13 @@ Built with [Textual](https://textual.textualize.io/) and
 - Incremental search with match highlighting (`Ctrl+F`, `Shift+PgUp/Down`,
   `Ctrl+C` to copy the current match)
 - View filter — show all / cleared-only / unreconciled-only transactions (`Ctrl+L`)
+- Transaction filter popup (`Ctrl+O`) — smart dates (named periods, quarters,
+  relative offsets, month-name/year-month shorthand) plus substring-or-regex
+  Account/Payee matching; combines with the `Ctrl+L` cycle rather than
+  overriding it, and shows a visible/total transaction count while active
+- Tab autocomplete for account and payee names, from declared directives plus
+  everything already used in the journal — also available inside the `Ctrl+O`
+  popup's fields
 - Transaction block selection and duplication (`Ctrl+T`, `Ctrl+G`)
 - Cleared status toggle — single transaction (3-state cycle) and bulk selection (`Ctrl+R`)
 - Insert today's date at cursor (`Ctrl+D`)
@@ -34,20 +43,16 @@ Built with [Textual](https://textual.textualize.io/) and
 
 ### Planned / In Progress
 
-See [ROADMAP.md](ROADMAP.md) for the full, current status — it's the
-source of truth this section summarizes, not the other way around.
+See [ROADMAP.md](ROADMAP.md) for the full, current status.
 
-- Transaction filter (`Ctrl+O`) with smart dates and regex — implemented
-  on the unreleased `release/1.1.0` branch; the latest PyPI release still
-  has only the UI stub (criteria filtering not yet active)
-- Tab autocomplete for account/payee names — also on `release/1.1.0`,
-  unreleased
-- `Alt+P` / `Alt+N` transaction templates, month/year date-shift modifiers,
-  large-journal performance — not yet started
-
-No side-panel features (account balance tree, transaction register,
-reconciliation mode) are currently planned — they existed pre-v0.8.0 and
-were removed; see [ROADMAP.md](ROADMAP.md)'s "Window Panes" note.
+- `Alt+P` / `Alt+N` — insert previous/next matching transaction template
+  (Emacs `ledger-mode` convention)
+- `Shift+Alt+Up` / `Shift+Alt+Down` — increment/decrement date by one month
+- `Ctrl+K` — delete to end of line
+- Large-journal performance (10 000+ transactions without UI lag)
+- Command palette: register all named actions
+- Configurable keybinding profiles (MS Office / Emacs Ledger-mode stubs are in
+  `src/ledgerkit_editor/keybindings/`)
 
 ---
 
@@ -115,6 +120,14 @@ ledgerkit dependency update workflow.
 ## Roadmap
 
 See [ROADMAP.md](ROADMAP.md) for planned features and current development status.
+
+---
+
+## License
+
+GPL-3.0-or-later. See [LICENSE](LICENSE) for the full license text and
+[NOTICE](NOTICE) for the project's copyright notice. Runtime dependency
+licenses are listed in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
 ---
 
