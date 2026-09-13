@@ -13,7 +13,7 @@ Built with [Textual](https://textual.textualize.io/) and
 
 ---
 
-![ledgerkit-editor demo](ledgerkit-editor-demo.gif)
+![ledgerkit-editor demo](ledgerkit-editor-demo-trimmed.gif)
 
 ## Features
 
